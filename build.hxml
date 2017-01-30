@@ -1,0 +1,8 @@
+-main Main.hx
+-cpp cpp-out/
+-cp src/
+-cp deps/linc_sdl/
+-cp deps/linc_stb/
+-debug
+-D NO_PRECOMPILED_HEADERS
+-D linux

@@ -1,0 +1,6 @@
+[submodule "deps/linc_stb"]
+	path = deps/linc_stb
+	url = https://github.com/snowkit/linc_stb.git
+[submodule "deps/linc_sdl"]
+	path = deps/linc_sdl
+	url = https://github.com/snowkit/linc_sdl.git
