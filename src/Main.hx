@@ -34,6 +34,11 @@ class Main {
         {
             SDL.delay(4);
         }
+
+        SDL.destroyTexture(texture);
+        SDL.freeSurface(surface);
+        SDL.destroyRenderer(state.renderer);
+        SDL.destroyWindow(state.window);
     }
 
     static function update()
@@ -42,17 +47,16 @@ class Main {
         {
             var e = SDL.pollEvent();
 
-            if(e.type == SDL_QUIT)
+            switch(e.type)
             {
-                return false;
-            }
-
-            if(e.type == SDL_KEYDOWN)
-            {
-                if(e.key.keysym.scancode == 41)
-                {
+                case SDL_QUIT:
                     return false;
-                }
+                case SDL_KEYDOWN:
+                    if(e.key.keysym.scancode == 41)
+                    {
+                        return false;
+                    }
+                default:
             }
         }
 
